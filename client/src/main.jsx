@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HeroPage } from './pages/HomePage.jsx'
 import { LoginPage } from './pages/LoginPage.jsx'
 import { SignupPage } from './pages/SignupPage.jsx'
+import { DashboardPage } from './pages/DashboardPage.jsx';
+import { ForecastPage } from './pages/ForecastPage.jsx';
+import { MapsPage } from './pages/MapsPage.jsx';
 import { ErrorPage } from './pages/ErrorPage.jsx';
 
 import App from './App.jsx'
@@ -26,6 +29,18 @@ const router = createBrowserRouter([
       {
         path: '/signup',
         element: <SignupPage />
+      },
+      {
+        path: '/dashboard',
+        element: <DashboardPage />
+      },
+      {
+        path: '/forecast',
+        element: <ForecastPage />
+      },
+      {
+        path: '/maps',
+        element: <MapsPage />
       }
     ]
   }

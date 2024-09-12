@@ -1,9 +1,12 @@
 import { Outlet } from 'react-router-dom';
-
+import { Navbar } from './components/MainNav';
 
 function App() {
     return (
-        <Outlet />
+        <>
+            <Navbar />
+            <Outlet />
+        </>
     )
 
 }
