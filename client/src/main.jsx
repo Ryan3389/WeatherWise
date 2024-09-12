@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HeroPage } from './pages/HomePage.jsx'
-import { loginPage } from './pages/LoginPage.jsx'
+import { LoginPage } from './pages/LoginPage.jsx'
 import { SignupPage } from './pages/SignupPage.jsx'
 import { ErrorPage } from './pages/ErrorPage.jsx';
 
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/login',
-        element: <loginPage />
+        element: <LoginPage />
       },
       {
         path: '/signup',
