@@ -9,7 +9,7 @@ export const LoginPage = () => {
                 <label htmlFor="password" className="block text-gray-900 mb-2">Password</label>
                 <input type="password" name="password" id="password" className="border border-gray-300 p-2 w-full rounded mb-6" />
                 <p className="text-center mb-3 text-gray-900">Don't have an account ? <Link to="/signup">Click here</Link></p>
-                <button className="bg-gray-600 text-white w-full p-2 rounded hover:bg-gray-700">Sign In</button>
+                <button className="bg-gray-900 text-white w-full p-2 rounded hover:bg-gray-700">Sign In</button>
             </form>
         </section>
     )
