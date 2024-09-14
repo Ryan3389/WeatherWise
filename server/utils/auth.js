@@ -4,6 +4,7 @@ require('dotenv').config()
 
 
 const secret = process.env.SECRET
+
 const expiration = '2h'
 
 module.exports = {
@@ -13,7 +14,11 @@ module.exports = {
         },
     }),
     signToken: function ({ email, firstName, lastName, _id }) {
-        const payload = { email, firstName, lastName, _id };
-        return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+        try {
+            const payload = { email, firstName, lastName, _id };
+            return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+        } catch (error) {
+            console.log('JWT token error: ', error)
+        }
     }
 }
