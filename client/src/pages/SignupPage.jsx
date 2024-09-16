@@ -11,7 +11,7 @@ export const SignupPage = () => {
         password: ''
     })
 
-    // const [createUser, { error, data }] = useMutation(CREATE_USER)
+    const [createUser, { error, data }] = useMutation(CREATE_USER)
 
 
     const handleChange = (e) => {
@@ -22,19 +22,50 @@ export const SignupPage = () => {
         })
     }
 
-    const handleFormSubmit = async (e) => {
-        e.preventDefault()
+    // const handleFormSubmit = async (e) => {
+    //     e.preventDefault()
+    //     try {
+    //         const { data } = await createUser({
+    //             variables: { ...formState }
+    //         })
+    //         if (data && data.createUser) {
+    //             auth.login(data.createUser.token)
+    //         }
+    //     } catch (error) {
+    //         console.error('User login error, signup page: ', error)
+    //     }
+    // }
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault()
+
         try {
             const { data } = await createUser({
                 variables: { ...formState }
             })
+
             if (data && data.createUser) {
                 auth.login(data.createUser.token)
+            } else {
+                console.log('No user data returned')
             }
         } catch (error) {
-            console.error('User login error, signup page: ', error)
+            console.error(error)
         }
     }
+
+    // const handleFormSubmit = async (e) => {
+    //     e.preventDefault()
+    //     try {
+    //         const { data } = await createUser({
+    //             variables: { ...formState }
+    //         })
+
+    //         console.log(data)
+    //     } catch (error) {
+    //         console.error('FORM SUBMIT ERROR: ', error)
+    //     }
+    // }
 
 
 
