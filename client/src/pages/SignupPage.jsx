@@ -22,20 +22,6 @@ export const SignupPage = () => {
         })
     }
 
-    // const handleFormSubmit = async (e) => {
-    //     e.preventDefault()
-    //     try {
-    //         const { data } = await createUser({
-    //             variables: { ...formState }
-    //         })
-    //         if (data && data.createUser) {
-    //             auth.login(data.createUser.token)
-    //         }
-    //     } catch (error) {
-    //         console.error('User login error, signup page: ', error)
-    //     }
-    // }
-
     const handleFormSubmit = async (event) => {
         event.preventDefault()
 
@@ -53,20 +39,6 @@ export const SignupPage = () => {
             console.error(error)
         }
     }
-
-    // const handleFormSubmit = async (e) => {
-    //     e.preventDefault()
-    //     try {
-    //         const { data } = await createUser({
-    //             variables: { ...formState }
-    //         })
-
-    //         console.log(data)
-    //     } catch (error) {
-    //         console.error('FORM SUBMIT ERROR: ', error)
-    //     }
-    // }
-
 
 
     return (
@@ -109,8 +81,7 @@ export const SignupPage = () => {
                     onChange={handleChange}
                 />
 
-                {/* <label htmlFor="confirmPassword" className="block text-gray-900 mb-2">Confirm Password</label>
-                <input type="password" name="confirmPassword" id="confirmPassword" className="border border-gray-300 p-2 w-full rounded mb-4" /> */}
+
                 <button type="submit" className="bg-gray-900 text-white w-full p-2 rounded hover:bg-gray-700">Create Account</button>
             </form>
         </section>
