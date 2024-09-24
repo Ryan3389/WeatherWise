@@ -1,0 +1,11 @@
+.search-input {
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.weather-btn-container {
+    display: flex;
+    justify-content: center;
+}
